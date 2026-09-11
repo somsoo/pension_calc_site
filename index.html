@@ -118,7 +118,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
       
       <!-- Input Panel (5 cols) -->
-      <section class="lg:col-span-5 bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+      <section class="lg:col-span-6 bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
         <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
           <span class="w-2 h-4 bg-blue-600 rounded-full"></span>
           소득 및 가입 정보 입력
@@ -192,7 +192,7 @@
       </section>
 
       <!-- Results Panel (7 cols) -->
-      <section class="lg:col-span-7 space-y-4">
+      <section class="lg:col-span-6 space-y-4">
         
         <!-- Summary Cards -->
         <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-5 text-white shadow-lg relative overflow-hidden">
@@ -245,39 +245,50 @@
           </div>
         </div>
 
-        
-          <div class="overflow-x-auto">
-            <table class="w-full text-xs text-left">
-              <thead class="text-slate-500 bg-slate-50 border-y border-slate-200">
-                <tr>
-                  <th class="py-2.5 px-3">연도</th>
-                  <th class="py-2.5 px-2">총 요율</th>
-                  <th class="py-2.5 px-2">본인 요율</th>
-                  <th class="py-2.5 px-3 text-right">월 본인부담액</th>
-                  <th class="py-2.5 px-3 text-right">현행대비 월 증가</th>
-                </tr>
-              </thead>
-              <tbody id="roadmapTableBody" class="divide-y divide-slate-100">
-                <!-- JS Generated Rows -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      <!-- Google AdSense Unit 1 (In-Result Slot) -->
-        <div style="max-width: 100%; margin: 24px auto; text-align: center; overflow: hidden;">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-2228289204702106"
-               data-ad-slot="3824727725"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
-          <script>
-               (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
       </section>
+    </div>
+
+    <!-- Full Width: Detailed Pension Reform Roadmap Table -->
+    <div class="mt-6 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+          <span>📊</span> 연도별 국민연금 보험료 인상 로드맵 (2025~2033)
+        </h3>
+        <span class="text-xs text-slate-500">단위: 원</span>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-left">
+          <thead class="text-slate-500 bg-slate-50 border-y border-slate-200">
+            <tr>
+              <th class="py-3 px-4">연도</th>
+              <th class="py-3 px-4">총 요율</th>
+              <th class="py-3 px-4">본인 요율</th>
+              <th class="py-3 px-4 text-right">월 본인부담액</th>
+              <th class="py-3 px-4 text-right">현행대비 월 증가</th>
+            </tr>
+          </thead>
+          <tbody id="roadmapTableBody" class="divide-y divide-slate-100">
+            <!-- JS Generated Rows -->
+          </tbody>
+        </table>
+      </div>
+      <p class="text-[11px] text-slate-400 mt-3 leading-relaxed">
+        * 정부 연금개혁안 모수개혁 추진 계획에 따라 매년 0.5%p씩 단계적으로 인상되는 추정치입니다.
+      </p>
+    </div>
+
+    <!-- Google AdSense Unit 1 (In-Result Slot: Centered after Table) -->
+    <div style="max-width: 728px; width: 100%; margin: 30px auto; text-align: center; overflow: hidden;">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="3824727725"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
 
     <!-- Deep-Dive Guides Section (전문 서브페이지 링크) -->
@@ -358,18 +369,7 @@
       </div>
     </section>
 
-    <!-- Google AdSense Unit 2 (Bottom Slot) -->
-    <div class="my-4 text-center overflow-hidden">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-2228289204702106"
-           data-ad-slot="3416334507"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
+
 
   <!-- Google AdSense Slot 2 (Bottom: Below FAQ) -->
     <div style="max-width: 728px; width: 100%; margin: 35px auto 20px; text-align: center; overflow: hidden;">
