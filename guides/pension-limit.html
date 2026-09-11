@@ -1,123 +1,217 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>국민연금 상한액 617만원 하한액 39만원 기준 총정리</title>
-  <meta name="description" content="국민연금 기준소득월액 상한액(617만)과 하한액(39만)의 의미, 고소득자 보험료 동결 원리 및 연금 수령액 산정 공식을 상세히 알아봅니다.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://pension.enjoy-onepage.com/guides/pension-limit.html">
-
-  <meta property="og:type" content="article">
-  <meta property="og:locale" content="ko_KR">
-  <meta property="og:url" content="https://pension.enjoy-onepage.com/guides/pension-limit.html">
-  <meta property="og:site_name" content="국민연금 인상 계산기">
-  <meta property="og:title" content="국민연금 상한액 617만원 하한액 39만원 기준 총정리">
-  <meta property="og:description" content="국민연금 기준소득월액 상한액(617만)과 하한액(39만)의 의미, 고소득자 보험료 동결 원리 및 연금 수령액 산정 공식을 상세히 알아봅니다.">
-  <meta property="og:image" content="https://pension.enjoy-onepage.com/og-image.png">
-
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/icon.png">
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421332766487920" crossorigin="anonymous"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>국민연금 예상 수령액 조회 소득대체율 공식</title>
+  <meta name="description" content="내가 낸 돈으로 얼마를 받을까? A값 B값 공식과 물가상승률 반영 예상 수령액 계산법." />
+  <meta name="keywords" content="국민연금 예상 수령액 조회, 국민연금 모의계산, 소득대체율, A값 B값" />
+  <meta name="theme-color" content="#3b82f6" />
+  <link rel="icon" href="../favicon.ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --dark: #1e40af;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding-bottom: 60px;
+    }
+    .nav-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .nav-bar a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .guide-hero-img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 1.65rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+    .meta-tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: var(--muted);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .guide-section {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .guide-section h2 {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .guide-section p {
+      color: #334155;
+      font-size: 1.02rem;
+      margin-bottom: 14px;
+      word-break: keep-all;
+    }
+    .callout {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 16px 18px;
+      border-radius: 6px;
+      margin: 18px 0;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+    .callout strong { color: var(--dark); }
+    .faq-item {
+      background: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+    }
+    .faq-item h3 {
+      font-size: 1.05rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .ad-wrap {
+      margin: 30px 0;
+      min-height: 100px;
+      background: #f8fafc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .home-btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 30px;
+      font-size: 1.05rem;
+    }
+    .home-btn:hover { opacity: 0.95; }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
-
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-blue-600 transition">
-        <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-black text-sm shadow-sm">연금</span>
-        <span>국민연금 인상 계산기</span>
-      </a>
-      <nav class="flex items-center gap-4 text-sm font-medium text-slate-600">
-        <a href="/" class="hover:text-blue-600 transition">계산기 홈</a>
-        <a href="/about.html" class="hover:text-blue-600 transition">개혁안 해설</a>
-        <a href="/privacy.html" class="hover:text-blue-600 transition">개인정보처리방침</a>
-      </nav>
+<body>
+  <div class="nav-bar">
+    <a href="../index.html">← 국민연금 계산기 바로가기</a>
+    <span style="font-size:0.85rem; color:#94a3b8;">실무 가이드</span>
+  </div>
+  
+  <div class="container">
+    <img src="../images/guide2.webp" alt="국민연금 소득대체율 산정 공식 및 물가상승률 연동 계산" class="guide-hero-img" loading="lazy" />
+    <span class="meta-tag">검증된 실무 정보 · 2026 최신 개정판</span>
+    <h1>국민연금 예상 수령액 산출 공식과 실질 가치 보장 원리</h1>
+    
+    <!-- Ad Slot Middle -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-  </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-8 w-full flex-grow">
-    <article class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+    
+        <section class="guide-section">
+            <h2>국민연금의 가장 큰 무기: 매년 물가상승률 100% 반영</h2>
+            <p>민간 개인연금과 달리 국민연금은 매년 1월 통계청 전국소비자물가변동률을 그대로 반영하여 지급액을 인상합니다. 과거에 납부했던 보험료 가치도 수령 시점의 현재가치로 재평가(A값 연동)되므로 인플레이션 위험이 전혀 없습니다.</p>
+            <div class='callout'><strong>공식 핵심:</strong> 기본연금액 = 1.2 × (A + B) × (1 + 0.05n/12). A값은 전체 가입자 평균소득(소득재분배), B값은 본인의 생애 평균소득입니다.</div>
+        </section>
+        
+        <section class="guide-section">
+            <h2>소득이 적을수록 수익비가 높아지는 소득재분배 기능</h2>
+            <p>A값 요소 덕분에 저소득층은 자기가 낸 보험료 대비 2~3배 이상의 연금을 돌려받고, 고소득층도 1.3~1.5배 수준의 안정적인 수익비를 보장받습니다. 어떤 민간 금융상품도 국민연금의 수익비를 따라올 수 없습니다.</p>
+            
+        </section>
+        
+
+    <div class="guide-section">
+      <h2>자주 묻는 질문 (FAQ)</h2>
       
-      <div>
-        <div class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 mb-2">상·하한액 해설</div>
-        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900">국민연금 상한액 617만원과 하한액 39만원의 의미</h1>
-        <p class="text-xs text-slate-500 mt-1">업데이트: 2026년 9월 11일 | 작성: 연금 분석팀</p>
-      </div>
-
-      <div class="prose prose-slate max-w-none text-xs text-slate-600 leading-relaxed space-y-4">
-        <h2 class="text-base font-bold text-slate-900 mt-4 mb-2">1. 기준소득월액 상한액과 하한액이란?</h2>
-        <p>
-          국민연금은 건강보험과 달리 <strong>상한액</strong>과 <strong>하한액</strong>이 엄격히 정해져 있습니다. 소득이 아무리 많아도 상한액까지만 소득으로 인정하여 보험료를 걷고, 반대로 소득이 매우 적더라도 하한액 기준으로 최소한의 보험료를 부과합니다.
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-          <div class="bg-purple-50 p-4 rounded-xl border border-purple-200">
-            <span class="text-purple-700 font-bold text-sm block mb-1">상한액: 월 6,170,000원</span>
-            <p class="text-xs text-purple-900 leading-relaxed">
-              월 급여가 1,000만 원이든 2,000만 원이든, 국민연금은 최대 6,170,000원까지만 인정됩니다. 따라서 2026년 기준 직장인의 본인 최대 월 보험료는 약 <strong>293,075원</strong>으로 동결됩니다.
-            </p>
-          </div>
-          <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
-            <span class="text-amber-700 font-bold text-sm block mb-1">하한액: 월 390,000원</span>
-            <p class="text-xs text-amber-900 leading-relaxed">
-              월 소득이 10만 원이나 20만 원이라도 최소 390,000원의 소득이 있는 것으로 간주하여, 2026년 기준 직장인은 최소 <strong>18,525원</strong>의 월 보험료를 납부하게 됩니다.
-            </p>
-          </div>
+        <div class="faq-item">
+            <h3>Q. 예상 수령액은 어디서 직접 확인하나요?</h3>
+            <p>A. 국민연금공단 홈페이지 '내연금 알아보기' 또는 국민비서 포털에서 공동인증서 로그인으로 1초 만에 확인 가능합니다.</p>
         </div>
-
-        <h2 class="text-base font-bold text-slate-900 mt-6 mb-2">2. 상한액은 왜 매년 7월에 바뀔까요?</h2>
-        <p>
-          국민연금법 시행령에 따라 국민연금 전체 가입자의 최근 3개년 평균소득월액(A값)의 변동률을 반영하여 <strong>매년 7월 1일부터 다음 해 6월 30일까지 1년간 적용</strong>됩니다. 평균 임금이 상승할수록 상한액도 완만하게 매년 상향 조정됩니다.
-        </p>
-
-        <h2 class="text-base font-bold text-slate-900 mt-6 mb-2">3. 상한액이 수령액(노후연금)에 미치는 영향</h2>
-        <p>
-          상한액 제도로 인해 고소득자는 보험료를 덜 내는 혜택이 있지만, 동시에 은퇴 후 받게 되는 국민연금 수령액 역시 상한액 기준으로 제한됩니다. 따라서 월 소득이 617만 원을 초과하는 직장인은 개인연금(연금저축, IRP)이나 퇴직연금을 통해 노후 소득의 공백을 채우는 것이 권장됩니다.
-        </p>
-
-        <!-- Google AdSense -->
-        <div class="bg-slate-100 rounded-xl p-2 border border-slate-200 text-center my-6 overflow-hidden">
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-6421332766487920"
-               data-ad-slot="3416334507"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
-          <script>
-               (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
+        
+        <div class="faq-item">
+            <h3>Q. 10년을 못 채우면 어떻게 되나요?</h3>
+            <p>A. 만 60세가 되었을 때 10년(120개월) 미만 납부자라면 그동안 낸 원금에 은행 정기예금 이자를 더해 '반환일시금'으로 한 번에 돌려받게 됩니다.</p>
         </div>
-
-      </div>
-
-      <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs">
-        <a href="/guides/worker-vs-freelancer.html" class="text-blue-600 hover:underline flex items-center gap-1">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-          이전: 직장인 vs 프리랜서 비교
-        </a>
-        <a href="/" class="text-blue-600 font-semibold hover:underline flex items-center gap-1">
-          계산기 홈으로 가기
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </a>
-      </div>
-
-    </article>
-  </main>
-
-  <footer class="bg-white border-t border-slate-200 py-8 text-xs text-slate-500">
-    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <span>© 2026 Enjoy Onepage. All rights reserved.</span>
-      <div class="flex items-center gap-4">
-        <a href="/" class="hover:text-blue-600 transition">계산기</a>
-        <a href="/about.html" class="hover:text-blue-600 transition">서비스 소개</a>
-        <a href="/privacy.html" class="hover:text-blue-600 transition">개인정보처리방침</a>
-      </div>
+        
     </div>
-  </footer>
 
+    <!-- Ad Slot Bottom -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <a href="../index.html" class="home-btn">국민연금 계산기 계산기 이용하기</a>
+  </div>
 </body>
 </html>
