@@ -1,0 +1,637 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국민연금 인상 계산기 | 2026년 9.5% 보험료율 실부담액</title>
+  <meta name="description" content="2026년 국민연금 개혁안 반영! 월급 입력 시 직장인·지역가입자의 연도별 국민연금 보험료 인상액과 실부담액을 즉시 계산합니다.">
+  <meta name="keywords" content="국민연금 인상 계산기, 국민연금 보험료율, 2026 국민연금, 국민연금 개혁, 직장인 국민연금, 지역가입자 국민연금, 연금인상 모의계산">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pension.enjoy-onepage.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:url" content="https://pension.enjoy-onepage.com/">
+  <meta property="og:site_name" content="국민연금 인상 계산기">
+  <meta property="og:title" content="국민연금 인상 계산기 | 2026년 9.5% 보험료율 실부담액">
+  <meta property="og:description" content="2026년 국민연금 개혁안 반영! 월급 입력 시 직장인·지역가입자의 연도별 국민연금 보험료 인상액과 실부담액을 즉시 계산합니다.">
+  <meta property="og:image" content="https://pension.enjoy-onepage.com/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="국민연금 인상 계산기 | 2026년 9.5% 보험료율 실부담액">
+  <meta name="twitter:description" content="2026년 국민연금 개혁안 반영! 월급 입력 시 직장인·지역가입자의 연도별 국민연금 보험료 인상액과 실부담액을 즉시 계산합니다.">
+  <meta name="twitter:image" content="https://pension.enjoy-onepage.com/og-image.png">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/icon.png">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421332766487920" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://pension.enjoy-onepage.com/#webapp",
+        "name": "국민연금 인상 계산기",
+        "url": "https://pension.enjoy-onepage.com/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "2026년 국민연금 모수개혁에 따른 직장인 및 지역가입자의 연도별 보험료율 인상액, 월 실부담액, 회사부담액을 실시간으로 계산하는 모의계산기입니다.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://pension.enjoy-onepage.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "2026년부터 국민연금 보험료율이 얼마나 인상되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "정부 연금개혁안에 따르면 현행 9%에서 2026년 9.5%로 0.5%p 인상되며, 2033년 최종 목표치인 13.0%까지 매년 단계적으로 인상됩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "직장인과 프리랜서(지역가입자)의 보험료 부담 차이는 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "직장가입자는 총 보험료의 절반(50%)을 사업주(회사)가 지원하므로 본인은 2026년 기준 4.75%만 부담합니다. 반면 프리랜서, 자영업자 등 지역가입자는 9.5% 전액을 본인이 부담합니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-blue-600 transition">
+        <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-black text-sm shadow-sm">연금</span>
+        <span>국민연금 인상 계산기</span>
+      </a>
+      <nav class="flex items-center gap-4 text-sm font-medium text-slate-600">
+        <a href="/about.html" class="hover:text-blue-600 transition">개혁안 해설</a>
+        <a href="/guides/pension-reform-2026.html" class="hidden sm:inline hover:text-blue-600 transition">인상 가이드</a>
+        <a href="/privacy.html" class="hover:text-blue-600 transition">개인정보처리방침</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-4xl mx-auto px-4 pt-6 pb-4 w-full">
+    <div class="text-center md:text-left md:flex md:items-center md:justify-between border-b border-slate-200 pb-5">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-2">
+          <span>2026 연금 모수개혁(9.5%~13%) 반영</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          내 월급에서 연금 보험료 얼마 더 낼까?
+        </h1>
+        <p class="text-slate-600 text-sm mt-1">
+          2026년 9.5%부터 2033년 13.0%까지 직장인·지역가입자의 월 실부담금과 인상액을 즉시 계산합니다.
+        </p>
+      </div>
+      <div class="mt-4 md:mt-0 flex gap-2 justify-center">
+        <button id="shareBtn" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+          공유하기
+        </button>
+        <button id="copyUrlBtn" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg border border-slate-200 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          링크 복사
+        </button>
+      </div>
+    </div>
+  </section>
+  <main class="max-w-4xl mx-auto px-4 py-4 w-full flex-grow">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Input Panel (5 cols) -->
+      <section class="lg:col-span-5 bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+        <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-2 h-4 bg-blue-600 rounded-full"></span>
+          소득 및 가입 정보 입력
+        </h2>
+
+        <!-- 가입자 유형 -->
+        <div class="mb-4">
+          <label class="block text-xs font-bold text-slate-700 mb-1.5">가입 유형 선택</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="cursor-pointer">
+              <input type="radio" name="calcType" value="employee" checked class="peer sr-only">
+              <div class="p-2.5 rounded-xl border border-slate-200 peer-checked:border-blue-600 peer-checked:bg-blue-50 text-center transition">
+                <div class="text-xs font-bold text-slate-800 peer-checked:text-blue-700">직장 가입자</div>
+                <div class="text-[11px] text-slate-500 mt-0.5">회사 50% 지원</div>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="calcType" value="freelancer" class="peer sr-only">
+              <div class="p-2.5 rounded-xl border border-slate-200 peer-checked:border-blue-600 peer-checked:bg-blue-50 text-center transition">
+                <div class="text-xs font-bold text-slate-800 peer-checked:text-blue-700">지역 가입자</div>
+                <div class="text-[11px] text-slate-500 mt-0.5">자영업·프리랜서(100%)</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 세전 월소득(월급) -->
+        <div class="mb-4">
+          <div class="flex justify-between items-center mb-1.5">
+            <label for="monthlyIncome" class="text-xs font-bold text-slate-700">세전 월소득 (월급여액)</label>
+            <span id="incomeFormatted" class="text-xs font-semibold text-blue-600">3,500,000원</span>
+          </div>
+          <div class="relative">
+            <input type="number" id="monthlyIncome" step="10000" min="100000" max="30000000" value="3500000" class="w-full text-right pr-8 pl-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
+            <span class="absolute right-3 top-3 text-xs font-bold text-slate-500 pointer-events-none">원</span>
+          </div>
+
+          <!-- Quick Buttons -->
+          <div class="grid grid-cols-4 gap-1.5 mt-2">
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="2000000">200만</button>
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="3000000">300만</button>
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="4000000">400만</button>
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="5000000">500만</button>
+          </div>
+          <div class="grid grid-cols-3 gap-1.5 mt-1.5">
+            <button type="button" class="quick-add text-[11px] py-1 bg-blue-50 hover:bg-blue-100 rounded-md font-medium text-blue-700 transition" data-add="100000">+10만</button>
+            <button type="button" class="quick-add text-[11px] py-1 bg-blue-50 hover:bg-blue-100 rounded-md font-medium text-blue-700 transition" data-add="500000">+50만</button>
+            <button type="button" class="quick-add text-[11px] py-1 bg-blue-50 hover:bg-blue-100 rounded-md font-medium text-blue-700 transition" data-add="1000000">+100만</button>
+          </div>
+        </div>
+
+        <!-- 비교 대상 연도 -->
+        <div class="mb-4">
+          <label for="targetYear" class="block text-xs font-bold text-slate-700 mb-1.5">인상 비교 목표 연도</label>
+          <select id="targetYear" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 font-semibold text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="2026" selected>2026년 (총 9.5% / +0.5%p)</option>
+            <option value="2027">2027년 (총 10.0% / +1.0%p)</option>
+            <option value="2028">2028년 (총 10.5% / +1.5%p)</option>
+            <option value="2029">2029년 (총 11.0% / +2.0%p)</option>
+            <option value="2030">2030년 (총 11.5% / +2.5%p)</option>
+            <option value="2031">2031년 (총 12.0% / +3.0%p)</option>
+            <option value="2032">2032년 (총 12.5% / +3.5%p)</option>
+            <option value="2033">2033년 (총 13.0% / +4.0%p - 최종)</option>
+          </select>
+        </div>
+
+        <!-- 기준소득월액 상/하한선 안내 뱃지 -->
+        <div id="limitNotice" class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-800 leading-relaxed">
+          <strong>💡 기준소득월액 적용:</strong> 국민연금 인정 상한액(617만원), 하한액(39만원) 기준이 자동 적용됩니다.
+        </div>
+      </section>
+
+      <!-- Results Panel (7 cols) -->
+      <section class="lg:col-span-7 space-y-4">
+        
+        <!-- Summary Cards -->
+        <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-5 text-white shadow-lg relative overflow-hidden">
+          <div class="relative z-10">
+            <div class="flex items-center justify-between">
+              <span id="targetBadge" class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white/20 text-white backdrop-blur-sm">2026년 기준 실부담금</span>
+              <span id="typeBadge" class="text-xs text-blue-100 font-medium">직장인 (50% 부담)</span>
+            </div>
+
+            <div class="mt-4">
+              <div class="text-xs text-blue-200 font-medium">선택 연도 본인 월 납부액</div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span id="resMonthlyPay" class="text-3xl sm:text-4xl font-black tracking-tight">166,250</span>
+                <span class="text-lg font-bold text-blue-100">원 / 월</span>
+              </div>
+            </div>
+
+            <!-- Difference Callout -->
+            <div class="mt-4 pt-4 border-t border-white/20 grid grid-cols-2 gap-3">
+              <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                <div class="text-[11px] text-blue-200 font-medium">현재 대비 월 추가부담</div>
+                <div class="text-lg font-bold text-amber-300 mt-0.5" id="resDiffMonth">+8,750원</div>
+              </div>
+              <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                <div class="text-[11px] text-blue-200 font-medium">연간 추가 부담액</div>
+                <div class="text-lg font-bold text-amber-300 mt-0.5" id="resDiffYear">+105,000원</div>
+              </div>
+            </div>
+
+            <div id="companySupportRow" class="mt-3 text-[11px] text-blue-200 flex justify-between items-center">
+              <span>* 회사(사업주) 지원금 동일:</span>
+              <span id="resCompanyPay" class="font-bold text-white">166,250원 / 월</span>
+            </div>
+          </div>
+        </div>
+        <!-- 비교 카드: 현재 vs 개혁 후 -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+          <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">2025 현행 vs 개혁 비교 세부 내역</h3>
+          <div class="grid grid-cols-2 gap-4 divide-x divide-slate-100 text-center">
+            <div>
+              <div class="text-xs text-slate-500">현재 (2025년 9.0%)</div>
+              <div class="text-lg font-extrabold text-slate-800 mt-1" id="resCurrentPay">157,500원</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">요율: <span id="resCurrentRate">4.5%</span></div>
+            </div>
+            <div class="pl-4">
+              <div class="text-xs text-blue-600 font-semibold" id="resTargetLabel">2026년 (총 9.5%)</div>
+              <div class="text-lg font-extrabold text-blue-600 mt-1" id="resTargetPay">166,250원</div>
+              <div class="text-[11px] text-blue-500 mt-0.5">요율: <span id="resTargetRate">4.75%</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google AdSense Unit 1 (In-Result Slot) -->
+        <div class="bg-slate-100 rounded-xl p-2 border border-slate-200 text-center my-4 overflow-hidden">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-6421332766487920"
+               data-ad-slot="3824727725"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
+        <!-- 연도별 인상 로드맵 테이블 (2025~2033) -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-sm font-bold text-slate-900">연도별 국민연금 보험료 인상 로드맵 (2025~2033)</h3>
+            <span class="text-[11px] text-slate-500">단위: 원</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left">
+              <thead class="text-slate-500 bg-slate-50 border-y border-slate-200">
+                <tr>
+                  <th class="py-2.5 px-3">연도</th>
+                  <th class="py-2.5 px-2">총 요율</th>
+                  <th class="py-2.5 px-2">본인 요율</th>
+                  <th class="py-2.5 px-3 text-right">월 본인부담액</th>
+                  <th class="py-2.5 px-3 text-right">현행대비 월 증가</th>
+                </tr>
+              </thead>
+              <tbody id="roadmapTableBody" class="divide-y divide-slate-100">
+                <!-- JS Generated Rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Deep-Dive Guides Section (전문 서브페이지 링크) -->
+    <section class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+      <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+        <span class="w-2 h-4 bg-indigo-600 rounded-full"></span>
+        국민연금 개혁 핵심 분석 가이드
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="/guides/pension-reform-2026.html" class="block p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-blue-50 hover:border-blue-200 transition group">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-700 mb-2">개혁안 총정리</span>
+          <h4 class="font-bold text-sm text-slate-900 group-hover:text-blue-600 transition">2026년 국민연금 개혁 주요 내용</h4>
+          <p class="text-xs text-slate-500 mt-1">보험료율 13% 인상 계획과 소득대체율 조정 내용 완벽 분석</p>
+        </a>
+        <a href="/guides/worker-vs-freelancer.html" class="block p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-blue-50 hover:border-blue-200 transition group">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-green-100 text-green-700 mb-2">비교 분석</span>
+          <h4 class="font-bold text-sm text-slate-900 group-hover:text-blue-600 transition">직장인 vs 프리랜서 부담금 차이</h4>
+          <p class="text-xs text-slate-500 mt-1">회사 지원 여부에 따른 실부담금 격차와 절세 팁</p>
+        </a>
+        <a href="/guides/pension-limit.html" class="block p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-blue-50 hover:border-blue-200 transition group">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-700 mb-2">기준소득월액</span>
+          <h4 class="font-bold text-sm text-slate-900 group-hover:text-blue-600 transition">상한액(617만)·하한액(39만)이란?</h4>
+          <p class="text-xs text-slate-500 mt-1">연봉이 1억 원이어도 상한액 이상 연금보험료를 내지 않는 이유</p>
+        </a>
+      </div>
+    </section>
+    <!-- FAQ Accordion -->
+    <section class="mt-6 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+      <h3 class="text-base font-bold text-slate-900 mb-4">자주 묻는 질문 (FAQ)</h3>
+      <div class="space-y-3" id="faqAccordion">
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>2026년부터 국민연금 보험료율이 얼마나 인상되나요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            2026년부터 현행 9.0%에서 9.5%로 0.5%p 인상되며, 이후 2033년까지 매년 0.5%p씩 단계적으로 인상되어 최종 13.0%에 도달하도록 개혁안이 추진되고 있습니다.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>직장인은 인상된 금액 전액을 본인이 내야 하나요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            아닙니다. 국민건강보험 및 국민연금법상 직장가입자는 사업주(회사)가 보험료의 50%를 부담합니다. 따라서 2026년 기준 본인은 4.75%만 부담하고, 나머지 4.75%는 회사가 지원합니다.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>월급이 700만 원, 1,000만 원인 고소득자는 어떻게 계산되나요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            국민연금에는 '기준소득월액 상한액' 제도가 있습니다. 현재 공식 상한액은 월 6,170,000원으로, 실제 월급이 1,000만 원이라도 617만 원까지만 소득으로 간주하여 보험료가 부과됩니다.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>보험료가 오르면 나중에 받는 연금액도 늘어나나요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            개혁안에 따라 소득대체율(은퇴 전 평균소득 대비 연금 수령액 비율)이 42% 수준으로 상향 또는 안정화되어, 더 많은 보험료를 납부할수록 은퇴 후 수령하는 기대 연금 수령액 역시 증가합니다.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Google AdSense Unit 2 (Bottom Slot) -->
+    <div class="bg-slate-100 rounded-xl p-2 border border-slate-200 text-center my-6 overflow-hidden">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-6421332766487920"
+           data-ad-slot="3416334507"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 mt-12 py-8 text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <span class="font-bold text-slate-800 text-sm">국민연금 인상 계산기</span>
+          <p class="mt-1 text-slate-500 text-[11px]">입력하신 소득 데이터는 전적으로 사용자 브라우저 내에서만 처리되며, 서버로 일체 전송되지 않습니다.</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-medium">
+          <a href="/about.html" class="hover:text-blue-600 transition">서비스 소개 및 공식 수식</a>
+          <a href="/privacy.html" class="hover:text-blue-600 transition">개인정보처리방침</a>
+          <a href="/sitemap.xml" class="hover:text-blue-600 transition">사이트맵</a>
+        </div>
+      </div>
+      <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-2">
+        <span>© 2026 Enjoy Onepage. All rights reserved. 본 서비스는 정부 공식 웹사이트가 아니며, 참고용 모의 시뮬레이션입니다.</span>
+        <span>기준: 보건복지부 연금개혁 추진계획안 및 국민연금공단 공시</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-4 py-2.5 rounded-xl shadow-xl transition-opacity duration-300 opacity-0 pointer-events-none z-50">
+    알림 메시지
+  </div>
+
+  <!-- JavaScript Calculator Logic -->
+  <script>
+    (function() {
+      // Constants
+      const LOWER_LIMIT = 390000;
+      const UPPER_LIMIT = 6170000;
+
+      // Roadmap rates by year (total rate)
+      const RATES = {
+        2025: 0.090,
+        2026: 0.095,
+        2027: 0.100,
+        2028: 0.105,
+        2029: 0.110,
+        2030: 0.115,
+        2031: 0.120,
+        2032: 0.125,
+        2033: 0.130
+      };
+
+      // Elements
+      const incomeInput = document.getElementById('monthlyIncome');
+      const incomeFormatted = document.getElementById('incomeFormatted');
+      const typeInputs = document.querySelectorAll('input[name="calcType"]');
+      const targetYearSelect = document.getElementById('targetYear');
+      const limitNotice = document.getElementById('limitNotice');
+      
+      const targetBadge = document.getElementById('targetBadge');
+      const typeBadge = document.getElementById('typeBadge');
+      const resMonthlyPay = document.getElementById('resMonthlyPay');
+      const resDiffMonth = document.getElementById('resDiffMonth');
+      const resDiffYear = document.getElementById('resDiffYear');
+      const resCompanyPay = document.getElementById('resCompanyPay');
+      const companySupportRow = document.getElementById('companySupportRow');
+      
+      const resCurrentPay = document.getElementById('resCurrentPay');
+      const resCurrentRate = document.getElementById('resCurrentRate');
+      const resTargetLabel = document.getElementById('resTargetLabel');
+      const resTargetPay = document.getElementById('resTargetPay');
+      const resTargetRate = document.getElementById('resTargetRate');
+      const roadmapTableBody = document.getElementById('roadmapTableBody');
+
+      const shareBtn = document.getElementById('shareBtn');
+      const copyUrlBtn = document.getElementById('copyUrlBtn');
+      const toast = document.getElementById('toast');
+
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0');
+        }, 2200);
+      }
+
+      function getSelectedType() {
+        for (let radio of typeInputs) {
+          if (radio.checked) return radio.value;
+        }
+        return 'employee';
+      }
+
+      function formatNumber(num) {
+        return Math.round(num).toLocaleString('ko-KR');
+      }
+
+      function calculate() {
+        const rawIncome = parseFloat(incomeInput.value) || 0;
+        const type = getSelectedType();
+        const year = parseInt(targetYearSelect.value, 10) || 2026;
+
+        let effectiveIncome = rawIncome;
+        let isLimited = false;
+        let limitType = '';
+
+        if (effectiveIncome > UPPER_LIMIT) {
+          effectiveIncome = UPPER_LIMIT;
+          isLimited = true;
+          limitType = 'upper';
+        } else if (effectiveIncome < LOWER_LIMIT && effectiveIncome > 0) {
+          effectiveIncome = LOWER_LIMIT;
+          isLimited = true;
+          limitType = 'lower';
+        }
+
+        if (isLimited) {
+          if (limitType === 'upper') {
+            limitNotice.innerHTML = `<strong>⚠️ 상한액 적용:</strong> 입력 소득(${formatNumber(rawIncome)}원)이 법정 상한액(${formatNumber(UPPER_LIMIT)}원)을 초과하여, 상한액 기준으로 산정됩니다.`;
+            limitNotice.className = "p-3 bg-blue-50 rounded-xl border border-blue-200 text-[11px] text-blue-800 leading-relaxed";
+          } else {
+            limitNotice.innerHTML = `<strong>⚠️ 하한액 적용:</strong> 입력 소득(${formatNumber(rawIncome)}원)이 법정 하한액(${formatNumber(LOWER_LIMIT)}원)에 미달하여, 하한액 기준으로 산정됩니다.`;
+            limitNotice.className = "p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-800 leading-relaxed";
+          }
+        } else {
+          limitNotice.innerHTML = `<strong>💡 기준소득월액:</strong> 월 ${formatNumber(effectiveIncome)}원에 대해 전액 정상 산정됩니다. (상한액: 617만원, 하한액: 39만원)`;
+          limitNotice.className = "p-3 bg-slate-100 rounded-xl border border-slate-200 text-[11px] text-slate-600 leading-relaxed";
+        }
+
+        incomeFormatted.textContent = `${formatNumber(rawIncome)}원`;
+
+        const userShareRatio = type === 'employee' ? 0.5 : 1.0;
+        const currentTotalRate = RATES[2025];
+        const targetTotalRate = RATES[year] || 0.095;
+
+        const currentUserRate = currentTotalRate * userShareRatio;
+        const targetUserRate = targetTotalRate * userShareRatio;
+
+        const currentMonthlyPay = effectiveIncome * currentUserRate;
+        const targetMonthlyPay = effectiveIncome * targetUserRate;
+        const diffMonth = targetMonthlyPay - currentMonthlyPay;
+        const diffYear = diffMonth * 12;
+
+        targetBadge.textContent = `${year}년 기준 실부담금`;
+        typeBadge.textContent = type === 'employee' ? '직장인 (본인 50% 부담)' : '지역가입자 (본인 100% 전액 부담)';
+
+        resMonthlyPay.textContent = formatNumber(targetMonthlyPay);
+        resDiffMonth.textContent = `+${formatNumber(diffMonth)}원`;
+        resDiffYear.textContent = `+${formatNumber(diffYear)}원`;
+
+        if (type === 'employee') {
+          companySupportRow.classList.remove('hidden');
+          resCompanyPay.textContent = `${formatNumber(targetMonthlyPay)}원 / 월`;
+        } else {
+          companySupportRow.classList.add('hidden');
+        }
+
+        resCurrentPay.textContent = `${formatNumber(currentMonthlyPay)}원`;
+        resCurrentRate.textContent = `${(currentUserRate * 100).toFixed(2)}%`;
+
+        resTargetLabel.textContent = `${year}년 (총 ${(targetTotalRate * 100).toFixed(1)}%)`;
+        resTargetPay.textContent = `${formatNumber(targetMonthlyPay)}원`;
+        resTargetRate.textContent = `${(targetUserRate * 100).toFixed(2)}%`;
+
+        let tableHtml = '';
+        for (let y = 2025; y <= 2033; y++) {
+          const totRate = RATES[y];
+          const uRate = totRate * userShareRatio;
+          const mPay = effectiveIncome * uRate;
+          const incMonth = mPay - currentMonthlyPay;
+          const isSelected = y === year;
+
+          tableHtml += `
+            <tr class="${isSelected ? 'bg-blue-50/80 font-bold text-blue-900' : 'hover:bg-slate-50 transition'}">
+              <td class="py-2.5 px-3">
+                ${y}년 ${isSelected ? '<span class="ml-1 text-[10px] bg-blue-600 text-white px-1.5 py-0.2 rounded">선택</span>' : ''}
+              </td>
+              <td class="py-2.5 px-2 text-slate-600">${(totRate * 100).toFixed(1)}%</td>
+              <td class="py-2.5 px-2 text-slate-600">${(uRate * 100).toFixed(2)}%</td>
+              <td class="py-2.5 px-3 text-right font-medium text-slate-900">${formatNumber(mPay)}원</td>
+              <td class="py-2.5 px-3 text-right ${incMonth > 0 ? 'text-amber-600 font-semibold' : 'text-slate-400'}">
+                ${incMonth > 0 ? '+' + formatNumber(incMonth) + '원' : '-'}
+              </td>
+            </tr>
+          `;
+        }
+        roadmapTableBody.innerHTML = tableHtml;
+
+        const params = new URLSearchParams(window.location.search);
+        params.set('income', rawIncome);
+        params.set('type', type);
+        params.set('year', year);
+        window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+      }
+
+      incomeInput.addEventListener('input', calculate);
+      targetYearSelect.addEventListener('change', calculate);
+      typeInputs.forEach(radio => radio.addEventListener('change', calculate));
+
+      document.querySelectorAll('.quick-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          incomeInput.value = btn.dataset.amount;
+          calculate();
+        });
+      });
+
+      document.querySelectorAll('.quick-add').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const current = parseFloat(incomeInput.value) || 0;
+          incomeInput.value = current + parseFloat(btn.dataset.add);
+          calculate();
+        });
+      });
+
+      shareBtn.addEventListener('click', async () => {
+        const shareData = {
+          title: '국민연금 인상 계산기 결과',
+          text: `2026년 국민연금 개혁! 내 월급 기준 국민연금 실부담금 및 인상액을 확인해보세요.`,
+          url: window.location.href
+        };
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+          } catch (e) {}
+        } else {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('공유 링크가 클립보드에 복사되었습니다.');
+          });
+        }
+      });
+
+      copyUrlBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast('계산 결과 링크가 복사되었습니다.');
+        });
+      });
+
+      function initFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('income')) {
+          const val = parseFloat(params.get('income'));
+          if (!isNaN(val) && val > 0) incomeInput.value = val;
+        }
+        if (params.has('type')) {
+          const typeVal = params.get('type');
+          typeInputs.forEach(radio => {
+            radio.checked = (radio.value === typeVal);
+          });
+        }
+        if (params.has('year')) {
+          const yearVal = parseInt(params.get('year'), 10);
+          if (RATES[yearVal]) targetYearSelect.value = yearVal;
+        }
+        calculate();
+      }
+
+      initFromUrl();
+    })();
+  </script>
+</body>
+</html>

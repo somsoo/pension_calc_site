@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국민연금 개혁안 및 계산 산식 안내 | 서비스 소개</title>
+  <meta name="description" content="2026년부터 시행되는 국민연금 모수개혁 추진계획, 단계별 보험료율 인상 로드맵 및 공식 산정 기준을 안내합니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pension.enjoy-onepage.com/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:url" content="https://pension.enjoy-onepage.com/about.html">
+  <meta property="og:site_name" content="국민연금 인상 계산기">
+  <meta property="og:title" content="국민연금 개혁안 및 계산 산식 안내 | 서비스 소개">
+  <meta property="og:description" content="2026년부터 시행되는 국민연금 모수개혁 추진계획, 단계별 보험료율 인상 로드맵 및 공식 산정 기준을 안내합니다.">
+  <meta property="og:image" content="https://pension.enjoy-onepage.com/og-image.png">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/icon.png">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421332766487920" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-blue-600 transition">
+        <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-black text-sm shadow-sm">연금</span>
+        <span>국민연금 인상 계산기</span>
+      </a>
+      <nav class="flex items-center gap-4 text-sm font-medium text-slate-600">
+        <a href="/" class="hover:text-blue-600 transition">계산기 홈</a>
+        <a href="/guides/pension-reform-2026.html" class="hidden sm:inline hover:text-blue-600 transition">인상 가이드</a>
+        <a href="/privacy.html" class="hover:text-blue-600 transition">개인정보처리방침</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 w-full flex-grow">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-8">
+      
+      <div>
+        <div class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-2">공식 개혁안 및 수식 안내</div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900">국민연금 모수개혁 추진계획 및 계산 산식</h1>
+        <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+          본 계산기는 보건복지부의 2026년 국민연금 개혁 추진계획안 및 국민연금공단의 공식 공시 기준을 바탕으로, 
+          가입자별 실제 부담액과 연도별 변화 추이를 알기 쉽게 시뮬레이션할 수 있도록 설계되었습니다.
+        </p>
+      </div>
+
+      <!-- Section 1: 요율표 -->
+      <div class="border-t border-slate-100 pt-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-3">1. 연도별 국민연금 보험료율 인상 로드맵 (2025~2033)</h2>
+        <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+          정부 개혁안에 따르면, 1998년 이후 27년 동안 9.0%로 동결되었던 국민연금 보험료율이 2026년부터 매년 0.5%p씩 단계적으로 인상되어 2033년 최종 13.0%에 도달하게 됩니다.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left border border-slate-200 rounded-lg overflow-hidden">
+            <thead class="bg-slate-100 text-slate-700">
+              <tr>
+                <th class="py-2.5 px-3">연도</th>
+                <th class="py-2.5 px-3">총 보험료율</th>
+                <th class="py-2.5 px-3">직장인 본인부담(50%)</th>
+                <th class="py-2.5 px-3">회사 부담(50%)</th>
+                <th class="py-2.5 px-3">지역가입자(100%)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="bg-slate-50 font-medium">
+                <td class="py-2.5 px-3">2025년 (현행)</td>
+                <td class="py-2.5 px-3">9.0%</td>
+                <td class="py-2.5 px-3">4.50%</td>
+                <td class="py-2.5 px-3">4.50%</td>
+                <td class="py-2.5 px-3">9.00%</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-blue-700">2026년 (개혁 1년차)</td>
+                <td class="py-2.5 px-3 font-semibold text-blue-700">9.5% (+0.5%p)</td>
+                <td class="py-2.5 px-3">4.75%</td>
+                <td class="py-2.5 px-3">4.75%</td>
+                <td class="py-2.5 px-3">9.50%</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3">2027년</td>
+                <td class="py-2.5 px-3">10.0%</td>
+                <td class="py-2.5 px-3">5.00%</td>
+                <td class="py-2.5 px-3">5.00%</td>
+                <td class="py-2.5 px-3">10.00%</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3">2028년</td>
+                <td class="py-2.5 px-3">10.5%</td>
+                <td class="py-2.5 px-3">5.25%</td>
+                <td class="py-2.5 px-3">5.25%</td>
+                <td class="py-2.5 px-3">10.50%</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3">2029년</td>
+                <td class="py-2.5 px-3">11.0%</td>
+                <td class="py-2.5 px-3">5.50%</td>
+                <td class="py-2.5 px-3">5.50%</td>
+                <td class="py-2.5 px-3">11.00%</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3">2030년</td>
+                <td class="py-2.5 px-3">11.5%</td>
+                <td class="py-2.5 px-3">5.75%</td>
+                <td class="py-2.5 px-3">5.75%</td>
+                <td class="py-2.5 px-3">11.50%</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3">2031년</td>
+                <td class="py-2.5 px-3">12.0%</td>
+                <td class="py-2.5 px-3">6.00%</td>
+                <td class="py-2.5 px-3">6.00%</td>
+                <td class="py-2.5 px-3">12.00%</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3">2032년</td>
+                <td class="py-2.5 px-3">12.5%</td>
+                <td class="py-2.5 px-3">6.25%</td>
+                <td class="py-2.5 px-3">6.25%</td>
+                <td class="py-2.5 px-3">12.50%</td>
+              </tr>
+              <tr class="bg-blue-50 font-bold text-blue-900">
+                <td class="py-2.5 px-3">2033년 (최종 완료)</td>
+                <td class="py-2.5 px-3">13.0% (+4.0%p)</td>
+                <td class="py-2.5 px-3">6.50%</td>
+                <td class="py-2.5 px-3">6.50%</td>
+                <td class="py-2.5 px-3">13.00%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Section 2: 산출 공식 -->
+      <div class="border-t border-slate-100 pt-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-3">2. 공식 보험료 산출 수식 및 적용 기준</h2>
+        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 text-xs space-y-2 text-slate-700 font-mono">
+          <p><strong>1. 기준소득월액 산정:</strong></p>
+          <p class="pl-3 text-slate-600">기준소득월액 = MIN( MAX( 세전 월소득, 390,000원 ), 6,170,000원 )</p>
+          <p><strong>2. 직장가입자 본인부담액:</strong></p>
+          <p class="pl-3 text-slate-600">월 본인부담금 = 기준소득월액 × ( 해당연도 보험료율 × 0.5 ) [원단위 절사]</p>
+          <p><strong>3. 지역가입자 부담액:</strong></p>
+          <p class="pl-3 text-slate-600">월 전액부담금 = 기준소득월액 × 해당연도 보험료율 [원단위 절사]</p>
+        </div>
+        <p class="text-xs text-slate-500 mt-2">
+          * 법정 기준소득월액 상/하한액은 매년 7월 1일 전년도 전체 가입자 평균소득(A값) 변동률에 따라 조정 고시됩니다.
+        </p>
+      </div>
+
+      <!-- Section 3: 공식 출처 및 데이터 신뢰성 -->
+      <div class="border-t border-slate-100 pt-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-3">3. 데이터 출처 및 공식 링크</h2>
+        <ul class="list-disc pl-5 text-xs text-slate-600 space-y-1.5">
+          <li><strong>보건복지부:</strong> 연금개혁 추진계획 발표자료 및 국민연금법 개정안 입법예고 (<a href="https://www.mohw.go.kr" target="_blank" rel="noopener" class="text-blue-600 hover:underline">mohw.go.kr</a>)</li>
+          <li><strong>국민연금공단(NPS):</strong> 사업장 및 지역가입자 보험료 산정 기준 및 기준소득월액 고시 (<a href="https://www.nps.or.kr" target="_blank" rel="noopener" class="text-blue-600 hover:underline">nps.or.kr</a>)</li>
+        </ul>
+      </div>
+
+      <!-- Section 4: 세부 FAQ -->
+      <div class="border-t border-slate-100 pt-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-3">4. 국민연금 개혁 관련 핵심 FAQ</h2>
+        <div class="space-y-3 text-xs text-slate-600">
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <h3 class="font-bold text-slate-900 mb-1">Q. 왜 보험료율을 13%까지 인상하나요?</h3>
+            <p>초고령사회 진입 및 저출산으로 인해 현행 9% 체계에서는 국민연금 기금 고갈 시점이 2055년 전후로 앞당겨지기 때문입니다. 요율을 13%로 인상함으로써 기금 소진 시점을 2070년대 이후로 연장하고 미래 세대의 연금 수급권을 안정적으로 확보하기 위한 개혁입니다.</p>
+          </div>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <h3 class="font-bold text-slate-900 mb-1">Q. 소득대체율은 어떻게 변하나요?</h3>
+            <p>소득대체율은 40년 가입 기준 평균소득 대비 수령 연금액 비율입니다. 정부 개혁안에서는 보험료율 인상에 발맞추어 기존 40%로 예정되어 있던 인하 스케줄을 중단하고 42% 수준으로 유지·상향하여 국민들의 실질적인 노후 소득 보장성을 강화하도록 설계되었습니다.</p>
+          </div>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <h3 class="font-bold text-slate-900 mb-1">Q. 지역가입자를 위한 보험료 지원 제도가 있나요?</h3>
+            <p>정부에서는 프리랜서, 영세 자영업자, 농어민 및 저소득 지역가입자를 위해 '두루누리 사회보험료 지원' 및 '지역가입자 연금보험료 지원사업'을 점진적으로 확대하고 있습니다. 대상자에 해당하는 경우 최대 50%까지 보험료를 국고에서 지원받을 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-4 text-center">
+        <a href="/" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm hover:bg-blue-700 transition shadow-md">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          계산기 홈으로 이동하기
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-8 text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <span>© 2026 Enjoy Onepage. All rights reserved.</span>
+      <div class="flex items-center gap-4">
+        <a href="/" class="hover:text-blue-600 transition">계산기</a>
+        <a href="/about.html" class="text-blue-600 font-semibold">서비스 소개</a>
+        <a href="/privacy.html" class="hover:text-blue-600 transition">개인정보처리방침</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
