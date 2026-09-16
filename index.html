@@ -27,44 +27,57 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebApplication",
-        "@id": "https://pension.enjoy-onepage.com/#webapp",
-        "name": "국민연금 인상 계산기",
-        "url": "https://pension.enjoy-onepage.com/",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "All",
-        "browserRequirements": "Requires JavaScript. Requires HTML5.",
-        "description": "2026년 국민연금 모수개혁에 따른 직장인 및 지역가입자의 연도별 보험료율 인상액, 월 실부담액, 회사부담액을 실시간으로 계산하는 모의계산기입니다.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://pension.enjoy-onepage.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "2026년부터 국민연금 보험료율이 얼마나 인상되나요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "정부 연금개혁안에 따르면 현행 9%에서 2026년 9.5%로 0.5%p 인상되며, 2033년 최종 목표치인 13.0%까지 매년 단계적으로 인상됩니다."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "직장인과 프리랜서(지역가입자)의 보험료 부담 차이는 무엇인가요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "직장가입자는 총 보험료의 절반(50%)을 사업주(회사)가 지원하므로 본인은 2026년 기준 4.75%만 부담합니다. 반면 프리랜서, 자영업자 등 지역가입자는 9.5% 전액을 본인이 부담합니다."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://pension.enjoy-onepage.com/#webapp",
+      "name": "내 월급에서 연금 보험료 얼마 더 낼까?",
+      "url": "https://pension.enjoy-onepage.com/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "2026년 국민연금 개혁안 반영! 월급 입력 시 직장인·지역가입자의 연도별 국민연금 보험료 인상액과 실부담액을 즉시 계산합니다.",
+      "image": "https://pension.enjoy-onepage.com/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://pension.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "내 월급에서 연금 보험료 얼마 더 낼까? 이용 시 비용이 발생하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아닙니다. 내 월급에서 연금 보험료 얼마 더 낼까?는 회원가입이나 결제 없이 누구나 브라우저에서 100% 무료로 무제한 이용할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "입력한 개인정보나 데이터가 서버에 저장되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "절대 저장되지 않습니다. 모든 연산과 데이터 처리는 사용자의 기기 브라우저 메모리 내에서만 로컬 연산되며 외부 서버로 전송되지 않습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "스마트폰 모바일 브라우저에서도 사용 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 아이폰(Safari), 안드로이드(Chrome, 삼성인터넷) 등 모든 모바일 기기 화면에 최적화된 반응형 웹앱으로 편리하게 이용하실 수 있습니다."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 <link href="https://pension.enjoy-onepage.com/rss.xml" rel="alternate" title="국민연금 인상 계산기 | 2026년 9.5% 보험료율 실부담액 RSS Feed" type="application/rss+xml"/>
 <link href="https://pension.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
