@@ -2,6 +2,11 @@
 
 <html lang="ko">
 <head>
+    <!-- Performance Optimization: Resource Preconnect -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>국민연금 인상 계산기 | 2026년 9.5% 보험료율 실부담액</title>
@@ -98,7 +103,18 @@
     max-width: 100% !important;
     overflow: hidden !important;
   }
-</style>
+
+        /* U3 Accessibility: Global Keyboard Focus Ring Standard */
+        :focus-visible {
+            outline: 2px solid #3b82f6 !important;
+            outline-offset: 2px !important;
+        }
+        input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+            outline: 2px solid #2563eb !important;
+            outline-offset: 1px !important;
+        }
+    
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
 <!-- 상단 슬림 띠배너 (헤더 직하단: 50~60px 슬림형) -->
@@ -158,14 +174,14 @@
 <label class="block text-xs font-bold text-slate-700 mb-1.5">가입 유형 선택</label>
 <div class="grid grid-cols-2 gap-2">
 <label class="cursor-pointer">
-<input checked="" class="peer sr-only" name="calcType" type="radio" value="employee"/>
+<input checked="" class="peer sr-only" name="calcType" type="radio" value="employee" aria-label="calcType" />
 <div class="p-2.5 rounded-xl border border-slate-200 peer-checked:border-blue-600 peer-checked:bg-blue-50 text-center transition">
 <div class="text-xs font-bold text-slate-800 peer-checked:text-blue-700">직장 가입자</div>
 <div class="text-[11px] text-slate-500 mt-0.5">회사 50% 지원</div>
 </div>
 </label>
 <label class="cursor-pointer">
-<input class="peer sr-only" name="calcType" type="radio" value="freelancer"/>
+<input class="peer sr-only" name="calcType" type="radio" value="freelancer" aria-label="calcType" />
 <div class="p-2.5 rounded-xl border border-slate-200 peer-checked:border-blue-600 peer-checked:bg-blue-50 text-center transition">
 <div class="text-xs font-bold text-slate-800 peer-checked:text-blue-700">지역 가입자</div>
 <div class="text-[11px] text-slate-500 mt-0.5">자영업·프리랜서(100%)</div>
