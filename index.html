@@ -579,7 +579,7 @@
       }
 
       function calculate() {
-        const rawIncome = parseFloat(incomeInput.value) || 0;
+        const rawIncome = Math.max(0, parseFloat(incomeInput.value) || 0);
         const type = getSelectedType();
         const year = parseInt(targetYearSelect.value, 10) || 2026;
 
@@ -599,15 +599,25 @@
         }
 
         if (isLimited) {
+          limitNotice.textContent = '';
+          const strong = document.createElement('strong');
           if (limitType === 'upper') {
-            limitNotice.innerHTML = `<strong>⚠️ 상한액 적용:</strong> 입력 소득(${formatNumber(rawIncome)}원)이 법정 상한액(${formatNumber(UPPER_LIMIT)}원)을 초과하여, 상한액 기준으로 산정됩니다.`;
+            strong.textContent = '⚠️ 상한액 적용: ';
+            limitNotice.appendChild(strong);
+            limitNotice.appendChild(document.createTextNode(`입력 소득(${formatNumber(rawIncome)}원)이 법정 상한액(${formatNumber(UPPER_LIMIT)}원)을 초과하여, 상한액 기준으로 산정됩니다.`));
             limitNotice.className = "p-3 bg-blue-50 rounded-xl border border-blue-200 text-[11px] text-blue-800 leading-relaxed";
           } else {
-            limitNotice.innerHTML = `<strong>⚠️ 하한액 적용:</strong> 입력 소득(${formatNumber(rawIncome)}원)이 법정 하한액(${formatNumber(LOWER_LIMIT)}원)에 미달하여, 하한액 기준으로 산정됩니다.`;
+            strong.textContent = '⚠️ 하한액 적용: ';
+            limitNotice.appendChild(strong);
+            limitNotice.appendChild(document.createTextNode(`입력 소득(${formatNumber(rawIncome)}원)이 법정 하한액(${formatNumber(LOWER_LIMIT)}원)에 미달하여, 하한액 기준으로 산정됩니다.`));
             limitNotice.className = "p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-800 leading-relaxed";
           }
         } else {
-          limitNotice.innerHTML = `<strong>💡 기준소득월액:</strong> 월 ${formatNumber(effectiveIncome)}원에 대해 전액 정상 산정됩니다. (상한액 659만원·하한액 41만원, 보건복지부고시 제2026-31호)`;
+          limitNotice.textContent = '';
+          const strong = document.createElement('strong');
+          strong.textContent = '💡 기준소득월액: ';
+          limitNotice.appendChild(strong);
+          limitNotice.appendChild(document.createTextNode(`월 ${formatNumber(effectiveIncome)}원에 대해 전액 정상 산정됩니다. (상한액 659만원·하한액 41만원, 보건복지부고시 제2026-31호)`));
           limitNotice.className = "p-3 bg-slate-100 rounded-xl border border-slate-200 text-[11px] text-slate-600 leading-relaxed";
         }
 
