@@ -1,0 +1,28 @@
+{
+ "app": "pension_calc_site",
+ "host": "pension.enjoy-onepage.com",
+ "watch": false,
+ "status": "unverified",
+ "checked": "",
+ "soft_days": 60,
+ "hard_days": 120,
+ "grace_days": 31,
+ "hide": [],
+ "pages": [
+  "guide-freelancer.html",
+  "guide-replacement-43.html",
+  "guide-year-2027.html",
+  "guide-year-2033.html",
+  "income-250.html",
+  "income-300.html",
+  "income-350.html",
+  "income-400.html",
+  "income-500.html",
+  "income-max-659.html",
+  "index.html"
+ ],
+ "values": {},
+ "sources": {},
+ "valid_until": "2027-06-30",
+ "note": "이 페이지의 기준소득월액 상한·하한은 2026년 7월~2027년 6월 기준"
+}
